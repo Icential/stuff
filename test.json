@@ -1,0 +1,139 @@
+{
+	"gw2": {
+		"weapons": {
+			"w1": {
+				"id": 1,
+				"name": "Zojja's Claymore",
+				"description": "Crafted in the style of the renowned asuran genius, Zojja.",
+				"type": "greatsword",
+				"strength": {
+					"min": 1045,
+					"max": 1155
+				},
+				"set": "Zojja's weapons",
+				"skin": "Crimson Antique Claymore",
+				"rarity": "ascended",
+				"lvlreq": 80,
+				"binding": "account",
+				"value": "1g",
+				"itemlink": "[&AgGqtgAA]",
+				"skinlink": "[&Cn8QAAA=]",
+				"prefix": "berserker",
+				"stats": {
+					"power": 251,
+					"precision": 179,
+					"ferocity": 179
+				},
+				"upgradeslots": 2,
+				"infusionslots": 1,
+				"acquisitions": {
+					"containments": ["Chest of Greatswords", "Zojja's Weapon Chest"],
+					"recipe": {
+						"source": "Recipe: Zojja's Claymore",
+						"type": "greatsword",
+						"quantity": 1,
+						"discipline": "weaponsmith",
+						"ratingreq": 500,
+						"chatlink": "[&CWkeAAA=]",
+						"ingredients": [
+							"1 Deldrimor Steel Greatsword Blade",
+							"1 Deldrimor Steel Greatsword Hilt",
+							"1 Zojja's Berserker Inscription",
+							"1 Vision Crystal"
+						]
+					}
+				}
+			}
+		}
+	},
+	"wynncraft": {
+		"weapons": {
+			"w1": {
+				"id": 1,
+				"name": "Crack the Skies",
+				"rarity": "rare",
+				"skin": {
+					"tier": "3",
+					"type": "air"
+				},
+				"attackspeed": "normal",
+				"classreq": "warrior",
+				"lvlmin": 100,
+				"attributereqs": {
+					"dex": 35,
+					"agi": 50
+				},
+				"attributes": {
+					"dexterity": 7,
+					"agility": 13,
+					"walkspeed": {
+						"min": "5%",
+						"max": "20%"
+					},
+					"spelldamage": {
+						"min": "5%",
+						"max": "20%"
+					},
+					"thunderdamage": {
+						"min": "4%",
+						"max": "16%"
+					},
+					"airdamage": {
+						"min": "3%",
+						"max": "13%"
+					},
+					"earthdefense": {
+						"min": "-21%",
+						"max": "-11%"
+					}
+				},
+				"powderslots": 3
+			},
+
+			"w2": {
+				"id": 2,
+				"name": "Whimsy",
+				"rarity": "rare",
+				"skin": {
+					"tier": "3",
+					"type": "air"
+				},
+				"attackspeed": "superfast",
+				"classreq": "mage",
+				"lvlmin": 93,
+				"attributereqs": {
+					"int": 40,
+					"agi": 30
+				},
+				"attributes": {
+					"xpbonus": {
+						"min": "8%",
+						"max": "33%"
+					},
+					"stealing": {
+						"min": "1%",
+						"max": "3%"
+					},
+					"intelligence": 13,
+					"walkspeed": {
+						"min": "6%",
+						"max": "26%"
+					},
+					"spelldamage": {
+						"min": "-4%",
+						"max": "-2%"
+					},
+					"mainattackdamage": {
+						"min": "-6%",
+						"max": "-3%"
+					},
+					"waterdamage": {
+						"min": "7%",
+						"max": "29%"
+					}
+				},
+				"powderslots": 2
+			}
+		}
+	}
+}
