@@ -1,15 +1,15 @@
 import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+
+public class GW2Char {
     String name;
     String race;
     String prof;
     String[] races = {"Asura", "Sylvari", "Human", "Norn", "Charr"};
     String[] professions = {"Warrior", "Guardian", "Revenant", "Ranger", "Thief", "Engineer", "Necromancer", "Mesmer", "Elementalist"};
 
-    public Main(String charName, String charRace, String charProf) {
+    public GW2Char(String charName, String charRace, String charProf) {
         if (charName.endsWith(" ")) charName = charName.replaceAll(" +$", "");
         charName = nameCap(charName);
         charRace = firstCap(noSpace(charRace));
@@ -96,13 +96,14 @@ public class Main {
         return String.valueOf(chars);
     }
 
+    
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please put your character identifications (Name, Race, Core Profession):");
         String charID = userInput.nextLine();
         userInput.close();
         String[] idSplit = arrayify(charID);
-        Main newChar = new Main(idSplit[0], idSplit[1], idSplit[2]);
+        GW2Char newChar = new GW2Char(idSplit[0], idSplit[1], idSplit[2]);
         newChar.id();
     }
 }
