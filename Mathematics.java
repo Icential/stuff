@@ -26,6 +26,25 @@ public class Mathematics {
         return x;
     }
     
+    // Pythagoras Theorem Part 1
+    static void pyth() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Pythagoras Theorem: c^2 = a^2 + b^2\nWhat variable are you finding? (a, b, c)");
+        String userInput = input.nextLine().toLowerCase();
+        if (userInput.equals("a")) {
+            System.out.println("a = sqrt(c^2 - b^2)");
+            pyth0("b", "c", "a");
+        } else if (userInput.equals("b")) {
+            System.out.println("b = sqrt(c^2 - a^2)");
+            pyth0("a", "c", "b");
+        } else if (userInput.equals("c")) {
+            System.out.println("c = sqrt(a^2 + b^2)");
+            pyth0("a", "b", "c");
+        } else if (userInput.equals("back") || userInput.equals("prev")) main(null);
+        else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
+        else retry();
+    }
+
     // Pythagoras Theorem Part 2
     static void pyth0(String x, String y, String z) {
         Scanner input = new Scanner(System.in);
@@ -57,31 +76,14 @@ public class Mathematics {
         pyth0(x, y, z);
     }
 
-    // Pythagoras Theorem Part 1
-    static void pyth() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Pythagoras Theorem: c^2 = a^2 + b^2\nWhat variable are you finding? (a, b, c)");
-        String userInput = input.nextLine().toLowerCase();
-        if (userInput.equals("a")) {
-            System.out.println("a = sqrt(c^2 - b^2)");
-            pyth0("b", "c", "a");
-        } else if (userInput.equals("b")) {
-            System.out.println("b = sqrt(c^2 - a^2)");
-            pyth0("a", "c", "b");
-        } else if (userInput.equals("c")) {
-            System.out.println("c = sqrt(a^2 + b^2)");
-            pyth0("a", "b", "c");
-        } else if (userInput.equals("back") || userInput.equals("prev")) main(null);
-        else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
-        else retry();
-    }
-
     // Sine Rule (Side)
     static void sideSine() {
         Scanner input = new Scanner(System.in);
         System.out.println("Sine Rule (Side): A / sin(a) = B / sin(b) = C / sin(c)\nWhat variable are you finding? (a°, b°, c°, A, B, C)");
-        String userInput = input.nextLine().toLowerCase();
-
+        String userInput = input.nextLine();
+        if (userInput.equals("a")) {
+            System.out.println("a = ");
+        }
     }
 
     public static void main(String[] args) {
