@@ -26,14 +26,14 @@ public class Mathematics {
         return x;
     }
     
-    // Pythagoras Theorem
+    // Pythagoras Theorem Part 2
     static void pyth0(String x, String y, String z) {
         Scanner input = new Scanner(System.in);
         Random rng = new Random();
         br(65);
         System.out.println("What's " + x + " and " + y + "? (e.g. " + (rng.nextInt(10) + 1) + ", " + (rng.nextInt(10) + 1) + ")");
-            String userInput = input.nextLine().toLowerCase();
-            br(65);
+        String userInput = input.nextLine().toLowerCase();
+        br(65);
             if (userInput.contains(", ")) {
                 String[] inputA = userInput.split(", ");
                 basereq(inputA[0]);
@@ -57,10 +57,11 @@ public class Mathematics {
             pyth0(x, y, z);
     }
 
+    // Pythagoras Theorem Part 1
     static void pyth() {
         Scanner input = new Scanner(System.in);
         System.out.println("Pythagoras Theorem: c^2 = a^2 + b^2\nWhat variable are you finding? (a, b, c)");
-            String userInput = input.nextLine().toLowerCase();
+        String userInput = input.nextLine().toLowerCase();
             if (userInput.equals("a")) {
                 System.out.println("a = sqrt(c^2 - b^2)");
                 pyth0("b", "c", "a");
@@ -75,17 +76,21 @@ public class Mathematics {
             else retry();
     }
 
-    // Sine Rule
+    // Sine Rule (Side)
+    static void sideSine() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sine Rule (Side): A / sin(a) = B / sin(b) = C / sin(c)\nWhat variable are you finding? (a, b, c)");
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Mathinator v0.1 ALPHA! What mathematics fancy you?");
-        System.out.println("1. Pythagoras Theorem   2. Sine Rule");
+        System.out.println("1. Pythagoras Theorem   2. Sine Rule (Side)");
         Scanner input = new Scanner(System.in);
         String userInput = input.nextLine();
         br(65);
 
         if (userInput.equals("1")) pyth();
-        else if (userInput.equals("2")) {}
+        else if (userInput.equals("2")) sideSine();
         else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
         else retry();
         
