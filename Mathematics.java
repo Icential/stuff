@@ -81,8 +81,9 @@ public class Mathematics {
         Scanner input = new Scanner(System.in);
         System.out.println("Sine Rule (Side): A / sin(a) = B / sin(b) = C / sin(c)\nWhat variable are you finding? (a°, b°, c°, A, B, C)");
         String userInput = input.nextLine();
-        if (userInput.equals("a")) {
-            System.out.println("a = ");
+        if (userInput.equals("a") || userInput.equals("a°")) {
+            System.out.println("a° = sin^-1(A * sin b° / B)\na° = sin^-1(A * sin c° / C");
+            
         }
     }
 
