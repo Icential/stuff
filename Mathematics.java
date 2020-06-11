@@ -34,27 +34,27 @@ public class Mathematics {
         System.out.println("What's " + x + " and " + y + "? (e.g. " + (rng.nextInt(10) + 1) + ", " + (rng.nextInt(10) + 1) + ")");
         String userInput = input.nextLine().toLowerCase();
         br(65);
-            if (userInput.contains(", ")) {
-                String[] inputA = userInput.split(", ");
-                basereq(inputA[0]);
-                basereq(inputA[1]);
-                int b = Integer.parseInt(inputA[0]);
-                int c = Integer.parseInt(inputA[1]);
-                if (z.equals("a") || z.equals("b")) {
-                    System.out.println(z + " = sqrt(" + c +"^2 - " + b + "^2)");
-                    System.out.println(z + " = sqrt(" + c*c + " - " + b*b + ")");
-                    System.out.println(z + " = sqrt(" + (c*c - b*b) + ")");
-                    System.out.println(z + " = " + Math.sqrt(c * c - b * b));
-                } else if (z.equals("c")) {
-                    System.out.println(z + " = sqrt(" + b +"^2 + " + c + "^2)");
-                    System.out.println(z + " = sqrt(" + b*b + " + " + c*c + ")");
-                    System.out.println(z + " = sqrt(" + (b*b + c*c) + ")");
-                    System.out.println(z + " = " + Math.sqrt(b * b + c * c));
-                } else retry();
-            } if (userInput.equals("back") || userInput.equals("prev")) pyth();
-            else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
-            else retry();
-            pyth0(x, y, z);
+        if (userInput.contains(", ")) {
+            String[] inputA = userInput.split(", ");
+            basereq(inputA[0]);
+            basereq(inputA[1]);
+            int b = Integer.parseInt(inputA[0]);
+            int c = Integer.parseInt(inputA[1]);
+            if (z.equals("a") || z.equals("b")) {
+                System.out.println(z + " = sqrt(" + c +"^2 - " + b + "^2)");
+                System.out.println(z + " = sqrt(" + c*c + " - " + b*b + ")");
+                System.out.println(z + " = sqrt(" + (c*c - b*b) + ")");
+                System.out.println(z + " = " + Math.sqrt(c * c - b * b));
+            } else if (z.equals("c")) {
+                System.out.println(z + " = sqrt(" + b +"^2 + " + c + "^2)");
+                System.out.println(z + " = sqrt(" + b*b + " + " + c*c + ")");
+                System.out.println(z + " = sqrt(" + (b*b + c*c) + ")");
+                System.out.println(z + " = " + Math.sqrt(b * b + c * c));
+            } else retry();
+        } if (userInput.equals("back") || userInput.equals("prev")) pyth();
+        else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
+        else retry();
+        pyth0(x, y, z);
     }
 
     // Pythagoras Theorem Part 1
@@ -62,24 +62,26 @@ public class Mathematics {
         Scanner input = new Scanner(System.in);
         System.out.println("Pythagoras Theorem: c^2 = a^2 + b^2\nWhat variable are you finding? (a, b, c)");
         String userInput = input.nextLine().toLowerCase();
-            if (userInput.equals("a")) {
-                System.out.println("a = sqrt(c^2 - b^2)");
-                pyth0("b", "c", "a");
-            } else if (userInput.equals("b")) {
-                System.out.println("b = sqrt(c^2 - a^2)");
-                pyth0("a", "c", "b");
-            } else if (userInput.equals("c")) {
-                System.out.println("c = sqrt(a^2 + b^2)");
-                pyth0("a", "b", "c");
-            } else if (userInput.equals("back") || userInput.equals("prev")) main(null);
-            else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
-            else retry();
+        if (userInput.equals("a")) {
+            System.out.println("a = sqrt(c^2 - b^2)");
+            pyth0("b", "c", "a");
+        } else if (userInput.equals("b")) {
+            System.out.println("b = sqrt(c^2 - a^2)");
+            pyth0("a", "c", "b");
+        } else if (userInput.equals("c")) {
+            System.out.println("c = sqrt(a^2 + b^2)");
+            pyth0("a", "b", "c");
+        } else if (userInput.equals("back") || userInput.equals("prev")) main(null);
+        else if (userInput.equals("exit") || userInput.equals("leave") || userInput.equals("quit")) System.exit(0);
+        else retry();
     }
 
     // Sine Rule (Side)
     static void sideSine() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Sine Rule (Side): A / sin(a) = B / sin(b) = C / sin(c)\nWhat variable are you finding? (a, b, c)");
+        System.out.println("Sine Rule (Side): A / sin(a) = B / sin(b) = C / sin(c)\nWhat variable are you finding? (a°, b°, c°, A, B, C)");
+        String userInput = input.nextLine().toLowerCase();
+
     }
 
     public static void main(String[] args) {
