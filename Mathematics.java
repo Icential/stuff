@@ -4,18 +4,22 @@ import java.lang.Math;
 import java.util.Random;
 
 public class Mathematics {
+
+    // Generic breaklines
     static void br(int foo) {
         String line = "=====";
-        for (int i = 0; i < foo; i++) {
-            line += "=";
-        }
+        for (int i = 0; i < foo; i++) line += "=";
         System.out.println(line);
     }
+
+    // Common retry function
     static void retry() { 
         System.out.println("Invalid answer. Please try again"); 
         br(65);
         main(null);
     }
+
+    // Basic requirements function
     static String basereq(String x) {
         if (x.length() < 8 && x.matches("[0-9]+")) {}
         else retry();
